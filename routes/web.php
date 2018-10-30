@@ -11,10 +11,32 @@
 |
 */
 
-Route::get('/',function(){
+/*Route::get('/',function(){
 	return view('welcome');
 });
 
 Route::get('/',function(){
     return redirect('welcome');
+});*/
+
+
+
+
+
+
+
+
+
+
+
+//Change Route parameter
+
+Route::get('hello/{name}',function($name){
+    return'Hello,'.$name;
+});
+
+
+
+Route::get('hello/{name?}',function($name='Everybody'){
+    return'Hello,'.$name;
 });
