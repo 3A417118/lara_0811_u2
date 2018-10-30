@@ -70,9 +70,12 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
+						<a href="{{route('home.index')}}"></a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
+						<a href="{{ route('about.index')}}"></a>
+						<a href="{{ route('news.index')}}"></a>
                     @endauth
                 </div>
             @endif
