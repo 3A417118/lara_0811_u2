@@ -70,12 +70,9 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
-						<a href="{{route('home.index')}}"></a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
-						<a href="{{ route('about.index')}}"></a>
-						<a href="{{ route('news.index')}}"></a>
                     @endauth
                 </div>
             @endif
@@ -92,6 +89,7 @@
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
+					<a href="{{route('hello.index')}}">Hello</a>
                 </div>
             </div>
         </div>

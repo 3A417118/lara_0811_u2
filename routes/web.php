@@ -11,11 +11,11 @@
 |
 */
 
-/*Route::get('/',function(){
+Route::get('/',function(){
 	return view('welcome');
 });
 
-Route::get('/',function(){
+/*Route::get('/',function(){
     return redirect('welcome');
 });*/
 
@@ -40,3 +40,13 @@ Route::get('hello/{name}',function($name){
 Route::get('hello/{name?}',function($name='Everybody'){
     return'Hello,'.$name;
 });
+
+//參數成選擇性
+ Route::get('Hello/{name?}',function($name='Howard'){
+    return'Hello,'.$name;
+});
+
+//取名為 hello.index 
+Route::get('say/{name?}',['as'=>'hello.index',function($name='Everybody'){
+    return view('welcome');
+}]);
